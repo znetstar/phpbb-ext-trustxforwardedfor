@@ -1,5 +1,7 @@
 # PhpBB Extension - marttiphpbb Trust X-Forwarded-For
 
+Logging of user IPs when using a reverse proxy.
+
 ## Requirements
 
 phpBB 3.2+ PHP 7+
@@ -16,7 +18,7 @@ defined in the comma separated list environment variable
 MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS.
 
 If your reverse proxy has i.e the address 172.0.0.13, then set the environment variable
-MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS=172.17.0.3
+MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS=172.17.0.13
 
 ## Quick Install
 
