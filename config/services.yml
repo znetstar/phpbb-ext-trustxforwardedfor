@@ -1,0 +1,8 @@
+services:
+    marttiphpbb.trustxforwardedfor.listener:
+        class: marttiphpbb\trustxforwardedfor\event\listener
+        arguments:
+            - '@request'
+        tags:
+            - { name: event.listener }
+
