@@ -17,7 +17,7 @@ This extension will block all ips which are not localhost (`127.0.0.1` or `::1`)
 defined in the comma separated list environment variable
 `MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS`.
 
-If your reverse proxy has i.e the address `172.0.0.13`, then set the environment variable
+If your reverse proxy has i.e the address `172.17.0.13`, then set the environment variable
 `MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS=172.17.0.13`
 
 ## Quick Install
