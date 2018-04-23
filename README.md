@@ -11,7 +11,7 @@ phpBB 3.2+ PHP 7+
 The "X-Forwarded-For" header value is a comma and space separated list of IP addresses, the left-most being the original client, and each successive proxy that passed the request adding the IP address where it received the request from.
 
 This extension will set the user ip in your phpBB to the most trusted (most right) ip
-in the X-Forwarded-For header instead of `SERVER_ADDR` (the direct client)
+in the X-Forwarded-For header instead of `REMOTE_ADDR` (the direct client)
 Use this only with a reverse proxy which is under your control.
 This extension will block all ips which are not localhost (`127.0.0.1` or `::1`) unless
 defined in the environment variable `MARTTIPHPBB_TRUSTXFORWARDEDFOR_IPS` which can be a comma separated list.
