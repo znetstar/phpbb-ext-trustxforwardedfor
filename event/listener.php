@@ -49,7 +49,7 @@ class listener implements EventSubscriberInterface
 		if (!in_array($ip, $trusted_ips))
 		{
 			throw new \Exception('Trust X-Forwarded-For Extension: Untrusted IP: ' . $ip);
-		}		
+		}
 
 		$forwarded_for = trim($this->request->header('X-Forwarded-For'));
 		$forwarded_for = str_replace(' ', '', $forwarded_for);
@@ -58,10 +58,10 @@ class listener implements EventSubscriberInterface
 
 		if (!filter_var($forwarded_for, FILTER_VALIDATE_IP))
 		{
-			throw new \Exception('Trust X-Forwarded-For Extension: invalid X-Forwarded-For IP: ' . $ip);
+			throw new \Exception('Trust X-Forwarded-For Extension: invalid X-Forwarded-For: ' . $forwarded_for);
 		}
 
-		error_log('X-Forwarded-For: ' . $forwarded_for);	
+		error_log('X-Forwarded-For: ' . $forwarded_for);
 
 		$event['ip'] = $forwarded_for;
 	}
