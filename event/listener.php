@@ -55,7 +55,6 @@ class listener implements EventSubscriberInterface
 		$forwarded_for = str_replace(' ', '', $forwarded_for);
 		$forwarded_for = explode(',', $forwarded_for);
 		$forwarded_for = trim($forwarded_for[count($forwarded_for) - 1]);
-		list($forwarded_for) = explode(':', $forwarded_for);
 
 		if (!filter_var($forwarded_for, FILTER_VALIDATE_IP))
 		{
