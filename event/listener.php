@@ -11,6 +11,7 @@ use phpbb\request\request;
 use phpbb\event\data as event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\IpUtils;
 
 class listener implements EventSubscriberInterface
 {
@@ -46,7 +47,7 @@ class listener implements EventSubscriberInterface
 			$trusted_ips = ['127.0.0.1', '::1'];
 		}
 
-		if (!in_array($ip, $trusted_ips))
+		if (!IpUtils::checkIp($ip, $trusted_ips))
 		{
 			throw new \Exception('Trust X-Forwarded-For Extension: Untrusted IP: ' . $ip);
 		}
